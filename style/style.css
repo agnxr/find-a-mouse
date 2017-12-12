@@ -1,0 +1,129 @@
+body {
+    font-family: 'Pangolin', cursive;
+    background-color: #0B0703;
+}
+
+/* 1st section: main */
+
+.main {
+    width: 100%;
+    background-color: #0B0703;
+}
+
+#mainCenter {
+    width: 1200px;
+    height: 700px;
+    background-image: url("../images/cookie.jpg");
+    background-size: cover;
+    margin: 0 auto;
+    margin-top: -20px;
+}
+
+h1 {
+    font-family: 'Kavoon', cursive;
+    font-size: 100px;
+    margin-left: 200px;
+    color: #E7D7B0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    margin-left: 400px;
+}
+
+a:hover {
+    color: #E7D7B0;
+}
+
+/* 2nd section: description */
+
+
+.decription {
+    width: 100%;
+    margin-top: -35px;
+    background-image: linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.11617055, #e7d7b0), color-stop(0.2323411, #e7d1b0), color-stop(0.36028004999999996, #e7ccb0), color-stop(0.48821899999999996, #c8baa6), color-stop(0.61615795, #aaa99c), color-stop(0.7440969, #6e8789), color-stop(0.99999971850659, #336677));
+    background-image: -moz-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
+    background-image: -o-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
+    background-image: -ms-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
+
+}
+
+
+#descCenter {
+    width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+}
+
+p {
+    font-size: 30px;
+    color: black;
+    text-indent: 10%;
+    text-align: justify;
+
+}
+
+/* 3rd section: fairy */
+
+
+.fairy {
+    background-color: #336677;
+    width: 100%;
+}
+
+#fairyCenter {
+    width: 1200px;
+    margin: 0 auto;
+    height: 700px;
+}
+
+#btn {
+    background-color: transparent;
+    font-size: 30px;
+    margin-left: 500px;
+    border-color: transparent;
+    font-family: 'Pangolin', cursive;
+    color: #E7D7B0;
+}
+
+
+#btn:hover {
+    color: black;
+}
+
+#sawSpace{
+    border: 2px solid transparent;
+    height:500px;
+    width: 1000px;
+    margin: 0 auto;
+    background-image: url("../images/scroll.png");
+    background-size: cover;
+    text-align: center;
+}
+
+#saying {
+    font-family: 'Dancing Script', cursive;
+    font-size: 45px;
+    height: 20px;
+    width: 760px;
+    margin: 0 auto;
+    margin-top: 180px;
+    text-indent: 0;
+}
+
+/* Footer */
+
+footer {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    font-size: 20px;
+    margin-left: 500px;
+    margin-top: 10px;
+    color: #E7D7B0;
+}
