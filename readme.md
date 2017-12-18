@@ -10,3 +10,5 @@ Used technologies:
 * HTML5,
 * CSS3,
 * JavaScript (display a random sentence from array).
+
+Demo: https://agnxr.github.io/Fortune-Cookie/main.html
