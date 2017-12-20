@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: 'Pangolin', cursive;
     background-color: #0B0703;
@@ -13,8 +17,6 @@ body {
 #mainCenter {
     width: 1200px;
     height: 700px;
-    background-image: url("../images/cookie.jpg");
-    background-size: cover;
     margin: 0 auto;
     margin-top: -20px;
 }
@@ -22,8 +24,10 @@ body {
 h1 {
     font-family: 'Kavoon', cursive;
     font-size: 100px;
-    margin-left: 200px;
     color: #E7D7B0;
+    text-align: center;
+    margin-top: 30%;
+    margin-bottom: 20px;
 }
 
 a {
