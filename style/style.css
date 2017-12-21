@@ -1,64 +1,55 @@
 * {
     margin: 0;
     padding: 0;
+
 }
+
 body {
-    font-family: 'Pangolin', cursive;
-    background-color: #0B0703;
+    font-family: 'Amatic SC', cursive;
+    background-color: #FFD553;
 }
 
 /* 1st section: main */
 
 .main {
-    width: 100%;
-    background-color: #0B0703;
+    background-color: #FF6376;
 }
 
 #mainCenter {
-    width: 1200px;
-    height: 700px;
+    width: 1024px;
     margin: 0 auto;
 }
 
 h1 {
-    font-family: 'Kavoon', cursive;
     font-size: 100px;
-    color: #E7D7B0;
+    color: #FFD553;
     text-align: center;
-    margin-top: 25%;
-    margin-bottom: 20px;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    margin-left: 400px;
+#cookie {
+    width: 700px;
+    margin: 0 auto;
 }
 
-a:hover {
-    color: #E7D7B0;
+#cookie img {
+    margin-bottom: 50px;
 }
+
 
 /* 2nd section: description */
 
 
 .decription {
-    width: 100%;
-    margin-top: -35px;
-    background-image: linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
-    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.11617055, #e7d7b0), color-stop(0.2323411, #e7d1b0), color-stop(0.36028004999999996, #e7ccb0), color-stop(0.48821899999999996, #c8baa6), color-stop(0.61615795, #aaa99c), color-stop(0.7440969, #6e8789), color-stop(0.99999971850659, #336677));
-    background-image: -moz-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
-    background-image: -o-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
-    background-image: -ms-linear-gradient(top, #e7d7b0 12%, #e7d1b0 23%, #e7ccb0 36%, #c8baa6 49%, #aaa99c 62%, #6e8789 74%, #336677 100%);
+    background-color: #FFD553;
 
 }
 
 
 #descCenter {
-    width: 1200px;
+    width: 1024px;
     margin: 0 auto;
-    height: 500px;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 p {
@@ -66,35 +57,37 @@ p {
     color: black;
     text-indent: 10%;
     text-align: justify;
-
 }
 
 /* 3rd section: fairy */
 
-
 .fairy {
-    background-color: #336677;
-    width: 100%;
+    background-color: black;
 }
 
 #fairyCenter {
-    width: 1200px;
+    width: 1024px;
     margin: 0 auto;
-    height: 700px;
 }
 
 #btn {
+    width:200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+button {
     background-color: transparent;
-    font-size: 30px;
-    margin-left: 500px;
+    font-size: 40px;
     border-color: transparent;
-    font-family: 'Pangolin', cursive;
     color: #E7D7B0;
+    font-family: 'Amatic SC', cursive;
+    margin-top: 50px;
 }
 
 
-#btn:hover {
-    color: black;
+button:hover {
+    color: #FF6376;
 }
 
 #sawSpace{
@@ -108,7 +101,6 @@ p {
 }
 
 #saying {
-    font-family: 'Dancing Script', cursive;
     font-size: 45px;
     height: 20px;
     width: 760px;
@@ -120,13 +112,17 @@ p {
 /* Footer */
 
 footer {
-    width: 1200px;
+    background-color: #FF6376;
+}
+
+#forward {
+    width: 1024px;
     margin: 0 auto;
+    text-align: center;
 }
 
 footer a {
-    font-size: 20px;
-    margin-left: 500px;
-    margin-top: 10px;
-    color: #E7D7B0;
+    color: #FFD553;
+    text-decoration: none;
+    font-size: 30px;
 }

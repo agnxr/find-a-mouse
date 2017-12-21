@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <title>Fortune Cookie</title>
     <link rel="stylesheet" href="style/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Kavoon" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
 
 </head>
 <body>
@@ -18,9 +16,9 @@
             <div id="mainCenter">
 
                 <h1> Fortune Cookie </h1>
-
-                    <a href="#btn">Przejdź do wróżby</a>
-
+                <div id="cookie">
+                    <a href="#btn"><img src="./images/fortune-cookie.svg"></a>
+                </div>
             </div>
 
         </section>
@@ -28,10 +26,6 @@
         <section class="decription">
 
             <div id="descCenter">
-
-                <br>
-                <br>
-                <br>
 
                 <p>
                     Według legendy historia ciasteczek sięga XIV wieku. W czasach, gdy Mongołowie rządzili w Chinach, Chu Yuan Chang planował powstanie przeciw najeźdźcom. Ciasteczek z zawartymi wewnątrz wiadomościami używał, aby potajemnie przekazywać Chińczykom informacje o dacie powstania. Do dziś podczas Święta Księżyca upamiętnia się tamte wydarzenia rozdając sobie ciasteczka z ukrytymi w środku karteczkami, które zawierają mądre przesłania do własnego zinterpretowania.
@@ -46,10 +40,16 @@
 
             <div id = "fairyCenter">
 
-                <button id="btn">Losuj wróżbę</button>
+                <div id="btn">
+
+                    <button>Losuj wróżbę</button>
+
+                </div>
 
                 <div id="sawSpace">
+
                     <p id="saying"></p>
+
                 </div>
 
             </div>
@@ -59,7 +59,12 @@
     </div>
 
     <footer>
-        <a href="#mainCenter">przejdź do góry</a>
+        <div id="forward">
+
+            <a href="#mainCenter">przejdź do góry</a>
+
+        </div>
+
     </footer>
 
 
