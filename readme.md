@@ -11,7 +11,8 @@ Used technologies:
 * CSS3,
 * JavaScript (display a random sentence from array).
 
-Demo: https://agnxr.github.io/Fortune-Cookie/main.html
+Demo: https://agnxr.github.io/Fortune-Cookie
 
+Screen:
 ![fortune cookie](https://user-images.githubusercontent.com/32043294/34237675-487d3b40-e5fe-11e7-883e-2fe613f0f127.png)
 
