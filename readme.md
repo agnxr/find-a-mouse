@@ -5,7 +5,7 @@
 Fortune Cookie - crisp cookie with a piece of paper inside, on which is an aphorism, or a vague prophecy. The message inside may also include a Chinese phrase. 
 
 
-Used technologies:
+Technologies used:
 
 * HTML5,
 * CSS3,
