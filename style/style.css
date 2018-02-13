@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-
 }
 
 body {
@@ -11,46 +10,48 @@ body {
 
 /* 1st section: main */
 
-.main {
-    background-color: #FF6376;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+section, footer {
+    display: flex;
+    justify-content: center;
 }
 
-#mainCenter {
-    width: 1024px;
-    margin: 0 auto;
+#top {
+    background-color: #FF6376;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    justify-content: center;
+}
+
+#top>div {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    border: 1px solid red;
 }
 
 h1 {
     font-size: 100px;
     color: #FFD553;
-    text-align: center;
 }
 
-#cookie {
-    width: 700px;
-    margin: 0 auto;
-}
-
-#cookie img {
-    margin-bottom: 50px;
+#top>div>div {
+    width: 30vw;
 }
 
 
 /* 2nd section: description */
 
-
 .decription {
     background-color: #FFD553;
-
 }
 
-
-#descCenter {
-    width: 1024px;
-    margin: 0 auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
+.description>div {
+    width: 80vw;
+    padding: 40px;
 }
 
 p {
@@ -64,17 +65,16 @@ p {
 
 .fairy {
     background-color: black;
+    padding: 40px;
 }
 
-#fairyCenter {
-    width: 1024px;
-    margin: 0 auto;
-}
-
-#btn {
-    width:200px;
-    margin: 0 auto;
+.fairy>div{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 button {
@@ -83,43 +83,37 @@ button {
     border-color: transparent;
     color: #E7D7B0;
     font-family: 'Amatic SC', cursive;
-    margin-top: 50px;
+    width: 20vw;
 }
-
 
 button:hover {
     color: #FF6376;
 }
 
-#sawSpace{
-    border: 2px solid transparent;
+.sawSpace{
     height:500px;
     width: 1000px;
-    margin: 0 auto;
     background-image: url("../images/scroll.png");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
 #saying {
     font-size: 45px;
-    height: 20px;
-    width: 760px;
-    margin: 0 auto;
-    margin-top: 180px;
+    height: 100px;
+    width: 80%;
     text-indent: 0;
+    text-align: center;
 }
 
 /* Footer */
 
 footer {
     background-color: #FF6376;
-}
-
-#forward {
-    width: 1024px;
-    margin: 0 auto;
-    text-align: center;
 }
 
 footer a {
