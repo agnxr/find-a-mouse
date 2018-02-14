@@ -96,7 +96,7 @@
 
         //jak w ciagu 10 szans nie trafi, to przegrywa:
 
-        if (clicks > 10) {
+        if (clicks > 9) {
             alert.innerText = "Gra skończona. Niestety przegrana.";
         
             okno.classList.add("visible");
