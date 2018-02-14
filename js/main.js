@@ -26,15 +26,15 @@
     //podpowiedzi dla gracza
 
     var makeCatchword = function (distance) {
-        if (distance < 10) {
+        if (distance < 53) {
         return "Parzy!";
-        } else if (distance < 20) {
+        } else if (distance < 60) {
         return "Gorąco";
-        } else if (distance < 40) {
+        } else if (distance < 80) {
         return "Ciepło";
-        } else if (distance< 80) {
+        } else if (distance< 100) {
         return "Letnio";
-        } else if (distance < 160) {
+        } else if (distance < 120) {
         return "Zimno";
         } else if (distance < 320) {
         return "Mróz";
@@ -82,12 +82,12 @@
 
         dist.innerText = catchword;
 
-        //sprawdzenie czy U trafil (trafi jak kliknie w obrebie 10 pixeli od celu)
+        //sprawdzenie czy U trafil (trafi jak kliknie w obrebie 50 pixeli od celu)
         var alert = document.querySelector("#alertTxt");
         var okno = document.querySelector(".alert");
 
-        if (distance < 100) {        
-            alert.innerText = "Mysz została znaleziona po " + kliknięcia + "klinięciach!";
+        if (distance < 50) {        
+            alert.innerText = "Mysz została znaleziona po " + clicks + "klinięciach!";
         
             okno.classList.add("visible");
             okno.classList.remove("hidden");
@@ -96,7 +96,7 @@
 
         //jak w ciagu 10 szans nie trafi, to przegrywa:
 
-        if (clicks > 9 && distance > 10) {
+        if (clicks > 10) {
             alert.innerText = "Gra skończona. Niestety przegrana.";
         
             okno.classList.add("visible");
