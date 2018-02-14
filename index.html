@@ -2,42 +2,66 @@
 <html lang="pl-PL">
 <head>
     <meta charset="UTF-8">
-    <title>Fortune Cookie</title>
+    <title>&#128045; Znajdź mysz! &#128045; </title>
     <link rel="stylesheet" href="style/style.css">
     <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
-
 </head>
 <body>
-    <section id="top">
+    <section class="intro">
         <div>
-            <h1> Fortune Cookie </h1>
-            <div>
-                <a href="#saying"><img src="./images/fortune-cookie.svg"></a>
-            </div>
-        </div>
-    </section>
+            <h1>Znajdź ukrytą mysz</h1>
+            
+            <img class="mouse" src ="images/mouse.svg">
 
-    <section class="description">
-        <div>
             <p>
-                Według legendy historia ciasteczek sięga XIV wieku. W czasach, gdy Mongołowie rządzili w Chinach, Chu Yuan Chang planował powstanie przeciw najeźdźcom. Ciasteczek z zawartymi wewnątrz wiadomościami używał, aby potajemnie przekazywać Chińczykom informacje o dacie powstania. Do dziś podczas Święta Księżyca upamiętnia się tamte wydarzenia rozdając sobie ciasteczka z ukrytymi w środku karteczkami, które zawierają mądre przesłania do własnego zinterpretowania.
+                W pokoju ukryła się mysz. Pomóż ją znaleźć klikając na obszar, w którym mogła się schować. 
+                Masz na to tylko 10 kliknięć!
+            </p>
+            <br>
+            <p>
+                Po każdym kliknięciu otrzymasz podpowiedź jak daleko jesteś od celu. 
             </p>
         </div>
+
     </section>
 
-    <section class="fairy">
-        <div>
-            <button>Losuj wróżbę</button>
+    <section>
+        <div class="panel">
+            <div>
+                <img src="images/compass.svg">
+                <p>Podpowiedź:</p>
+                <p id="dist"></p>
+            </div>
+            <div>
+                <img src="images/counter.svg">
+                    <p>Licznik kliknięć:</p>
+                    <p id="kliki"></p>
+                </div>
+                <div>
+                    <img class="again" src="images/play.svg">
+                    <button class="again">Zagraj jeszcze raz</button>
+                </div>
+            </div>
+    </section>
+
+    <section class="game">
+        <div class="container">
+
+            <div class="room_img">
+                <img id="room" width=640 height=460 src="images/pokoj.png">
+            </div>
             
-            <div class="sawSpace">
-                <p id="saying"></p>
+            <div class="lol">
+                
+                <div class="alert hidden">
+                    <img src = "images/mouse.svg">
+                    <p id="alertTxt"></p>
+                    <button class="again">Zagraj jeszcze raz</button>
+                </div> 
             </div>
         </div>
     </section>
-    
-    <footer>
-        <a href="#top">przejdź do góry</a>
-    </footer>
+
 <script src="js/main.js"></script>
 </body>
 

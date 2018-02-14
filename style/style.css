@@ -5,118 +5,154 @@
 
 body {
     font-family: 'Amatic SC', cursive;
-    background-color: #FFD553;
-}
+    /*
+    color: rgb(196, 183, 158);
+    background-color: rgb(193, 52, 62);
+    background-color: black;
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
+    color: rgb(201,198,202);
+    */
 
-/* 1st section: main */
+    background-color: lightgray;
 
-section, footer {
-    display: flex;
-    justify-content: center;
-}
-
-#top {
-    background-color: #FF6376;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    display: flex;
-    justify-content: center;
-}
-
-#top>div {
-    width: 50vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 40px;
 }
 
 h1 {
-    font-size: 100px;
-    color: #FFD553;
+    color:  rgb(27, 160, 171);
+    font-size: 60px;
+    color:  rgb(75, 63, 78);
+    margin-bottom: 30px;
+    font-weight: bold;
 }
 
-#top>div>div {
-    width: 30vw;
+.mouse {
+    width: 10vw;
+    margin-bottom: 20px;
 }
 
-
-/* 2nd section: description */
-
-.decription {
-    background-color: #FFD553;
-}
-
-.description>div {
-    width: 80vw;
-    padding: 40px;
-}
-
-p {
-    font-size: 30px;
-    color: black;
-    text-indent: 10%;
-    text-align: justify;
-}
-
-/* 3rd section: fairy */
-
-.fairy {
-    background-color: black;
-    padding: 40px;
-}
-
-.fairy>div{
-    width: 80vw;
+section {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
 }
 
-button {
-    background-color: transparent;
-    font-size: 40px;
-    border-color: transparent;
-    color: #E7D7B0;
+.intro {
+    flex-direction: column;
+    padding: 50px;
+    background-color:  rgb(27, 160, 171);
+}
+
+.intro p {
+    color: darkslategrey;
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(201,198,202);
+    color:  rgb(75, 63, 78);
+}
+
+.panel {
+    padding: 20px;
+}
+.panel div:first-child, .panel div:nth-child(2), .panel div:last-child{
+    display: flex;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.panel div:first-child>* , .panel div:nth-child(2)>*, .panel div:last-child>* {
+    margin-right: 30px;
+}
+
+img.again {
+    cursor: pointer;
+}
+
+.again {
     font-family: 'Amatic SC', cursive;
-    width: 20vw;
+    background-color: transparent;
+    border-color: transparent;
 }
 
-button:hover {
-    color: #FF6376;
+#game {
+    display: flex;
+    flex-direction: row;
 }
 
-.sawSpace{
-    height:500px;
-    width: 1000px;
-    background-image: url("../images/scroll.png");
-    background-size: cover;
+.alert img {
+    width: 30px;
+}
+
+
+.panel img {
+    height: 50px;
+}
+p, .again {
+    font-size: 20px;
+}
+.panel>div {
+    width: 200px;
+}
+
+.alert {
+    padding: 20px;
+    background-color:  rgb(27, 160, 171);
+    color: white;
+    z-index: 9999;   
+}
+
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
-#saying {
-    font-size: 45px;
-    height: 100px;
-    width: 80%;
-    text-indent: 0;
-    text-align: center;
+.lol {
+    width: 640px;
+    height: 200px;
+    margin-left: -640px;
+}
+.visible {
+    display: block;
 }
 
-/* Footer */
-
-footer {
-    background-color: #FF6376;
+.hidden {
+    display: none;
 }
 
-footer a {
-    color: #FFD553;
-    text-decoration: none;
-    font-size: 30px;
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+
+#alertTxt {
+
+    height: 50px;
+
+    font-size: 40px;
+}
+
+#room {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.again {
+    cursor: pointer;
 }

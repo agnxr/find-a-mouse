@@ -1,30 +1,115 @@
+    //1: wybierz losowe umiejscowienie myszy (loswa liczba x i y z przedzialu: 0 do wielkość obrazka-1, bo pierwszy pixel ma wspolrzedna 0)
 
-document.addEventListener("DOMContentLoaded", function() {
+    var randomNumber = function(imageSize) {
+        return Math.floor(Math.random() * imageSize); //math floor zaokrągla w dół liczbe z przedzialu 0-1 wygeerowana przez math random
+    };
 
+    //2: ustal CEL - współdrzędne położenia myszy (szerokosc x wysokosc obrazka)
+    var width = 640; 
+    var height = 460;
 
-    var sentences = ["Po jednym spotkaniu, łatwo się zaprzyjaźnić, ale razem mieszkając, łatwo się pokłócić.", "Piękne słowa nie są wiarygodne, wiarygodne – nie są piękne.", "Bez odwagi nie zostaniesz dowódcą.", "Biorąc strój nowy, zapomnij o starym.", "Dobre lekarstwo jest gorzkie w ustach, ale skuteczne w chorobie.", "Dopiero ze szczytu góry można ocenić rozległość równiny.", "Gdy zbyt pełno w czarce – łatwo o przelanie.", "Góra Tai nie odrzuca najmniejszego pyłku i dlatego jest taka wysoka.", "Istnieje tylko dwóch dobrych ludzi – jeden zmarł, a drugi się jeszcze nie narodził.", "Jeśli się nikogo o nic nie prosi, wszyscy wydają się uczynni.", "Jeśli zdobędziesz się na cierpliwość w jednej chwili gniewu, zaoszczędzisz sobie sto dni przykrości." , "Jeżeli strzelec spudłuje, niechaj tylko w sobie samym szuka przyczyny swego niepowodzenia.", "Kto ma pieniądze, może zmusić diabła, by napędzał jego młyn.", "Kto ma w domu miliony, nie ma chwili spokoju.", "Kto nie myśli o jutrze, będzie miał kłopoty, zanim dziś się skończy.", "Kto otwiera swe serce dla ambicji – zamyka je przed spokojem.", "Kto pyta, jest głupcem przez pięć minut; kto nie pyta, pozostaje nim do końca.", "Kto szuka przyjaciela bez wad, pozostanie bez przyjaciela.", "Lód o grubości trzech stóp nie bierze się z jednego chłodnego dnia.", "Ludzie, chociaż nie dożyją nawet stu lat, to jednak stwarzają sobie troski na całe tysiąclecia.", "Mądra pszczoła nie pije ze zwiędłego kwiecia.", "Mówiąc tysiąc słów, trudno sobie nie zaszkodzić.", "Najwięcej czasu ma człowiek, który niczego na później nie odkłada.", "Najwięcej kłamie ten, kto najwięcej mówi o sobie.", "Nie kłóć się z głupim, bo postronni nie zauważą różnicy.", "Nie sprzedaje się drzewa w lesie ani ryby w jeziorze.", "Przeszłość, jeśli jej nie zapomnisz, stanie się drogowskazem w przyszłości.", "Przemycana sól jest smaczniejsza od sprzedawanej legalnie.", "Ten, kto przeniósł górę, zaczął od małych kamyków.", "Wiedza i doświadczenie przychodzą z wiekiem. Najczęściej jest to wieko od trumny.","Zamiast innych się radzić, radź się samego siebie.","Zanim zaczniesz poprawiać świat, przejdź się trzy razy przez swój własny dom.", "Żyj tak, jakbyś miał umrzeć jutro, a pracuj tak jakbyś miał przed sobą wieczność."];
+    //findMouse(640,460);
 
+    var goal = {
+        x: randomNumber(width),
+        y: randomNumber(height)
+    }
+    
+    //3: oblicz odleglosc miedzy kliknieciem a celem ()
 
+    var countDistance = function (event, goal) { //e to wbudowany obiekt zdarzenia z inf nt. offsetów X i Y
+        var wayToX = event.offsetX - goal.x; //odleglosc w poziomie m-dzy miejscem klikniecia a celem
+        var wayToY = event.offsetY - goal.y; //odleglosc w pionie m-dzy miejscem klikniecia a celem
+        return Math.sqrt((wayToX * wayToX) + (wayToY * wayToY)); //twierdzenie Pitagorasa (w trojkacie prostokatnym trzecia przyprostokatna to a2 + b2 = c2 wiec licze perwiastek (Math.sqrt) z a2 + b2
+    };
 
+    //podpowiedzi dla gracza
 
-    var button = document.querySelector('button');
+    var makeCatchword = function (distance) {
+        if (distance < 10) {
+        return "Parzy!";
+        } else if (distance < 20) {
+        return "Gorąco";
+        } else if (distance < 40) {
+        return "Ciepło";
+        } else if (distance< 80) {
+        return "Letnio";
+        } else if (distance < 160) {
+        return "Zimno";
+        } else if (distance < 320) {
+        return "Mróz";
+        } else {
+        return "Syberia!";
+        }
+    };
 
+    //4: teraz lacze to wszystko z obsluga klikniecia -> gdy gracz kliknie w obrębie pola:
 
+    //obrazek:
+    var room = document.querySelector("#room");
 
-    button.addEventListener("click", function(){
+    //paragraf na podpowiedz z odlegloscia:
+    var dist = document.querySelector("dist");
 
-        var randomIndex = Math.floor(Math.random()*sentences.length);
+    //paragraf z iloscia klikniec:
+    var kliki = document.querySelector("#kliki");
 
-        var prediction = sentences[randomIndex];
+    //poczatek klikniec:
+    var clicks = 0;
 
-        var saying = document.querySelector("#saying");
+    //text w alercie
+    var alert = document.querySelector("#alertTxt");
+    
+    //okno - czy ma sie wyswietlac czy nie
+    var okno = document.querySelector(".alert");
 
-        saying.innerText = prediction;
+    room.addEventListener("click", function() {
+        //licznik kliknięć:
+        clicks++;
 
+        //od razu dodaje txt z licznikiem na strone:
+        kliki.innerText = clicks;
 
+        // Obliczam odległość między kliknięciem (zdarzeniem) a celem (myszą)
+        var distance = countDistance(event, goal);
 
-    })
+        //na podstawie odleglosci okreslam podpowiedz
+        var catchword = makeCatchword(distance);
 
-}); 
+        //umieszczam podpowiedz na stronie:
 
+        var dist = document.querySelector("#dist");
 
+        dist.innerText = catchword;
+
+        //sprawdzenie czy U trafil (trafi jak kliknie w obrebie 10 pixeli od celu)
+        var alert = document.querySelector("#alertTxt");
+        var okno = document.querySelector(".alert");
+
+        if (distance < 100) {        
+            alert.innerText = "Mysz została znaleziona po " + kliknięcia + "klinięciach!";
+        
+            okno.classList.add("visible");
+            okno.classList.remove("hidden");
+        
+        } 
+
+        //jak w ciagu 10 szans nie trafi, to przegrywa:
+
+        if (clicks > 9 && distance > 10) {
+            alert.innerText = "Gra skończona. Niestety przegrana.";
+        
+            okno.classList.add("visible");
+            okno.classList.remove("hidden");
+        }
+        
+    });
+
+//reset
+var again = document.querySelectorAll(".again");
+
+for(var i=0; i<again.length; i++){
+    again[i].addEventListener("click", function() {
+        location.reload();
+    });
+}
